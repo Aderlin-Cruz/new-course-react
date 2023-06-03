@@ -5,6 +5,7 @@ import { fetchPets } from '../hooks/api/fetchPets';
 
 export const Details = () => {
   const { id } = useParams();
+  console.log(id);
   const results = useQuery(['details', id], fetchPets);
 
   if (results.isLoading) {
